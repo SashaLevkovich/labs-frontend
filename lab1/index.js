@@ -17,21 +17,19 @@ $(document).ready(function () {
 
     const info = $(`
     <div class="info">
-      <h1>Информация</h1>
+      <h1>Информация</h1>ы
       <h4>Название:</h4>
       <p>${id.title}</p>
       <h4>Площадь:</h4>
       <p>${id.sq}</p>
     </div>
     `);
-    $('.wrapper').html(info);
+    $('.wrapper').append(info);
 
-    setTimeout(() => {
-      $('.info').fadeIn();
-    }, 1000);
+    $('.info').fadeIn();
   });
 
   $('.part').mouseleave(function () {
-    $('.info').css({ opacity: '0' }).fadeOut(100).remove();
+    $('.info').fadeOut().remove();
   });
 });
